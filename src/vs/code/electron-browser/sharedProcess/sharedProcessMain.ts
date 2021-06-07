@@ -131,7 +131,7 @@ class SharedProcessMain extends Disposable {
 
 		// Instantiate Contributions
 		this._register(combinedDisposable(
-			instantiationService.createInstance(NodeCachedDataCleaner, this.configuration.nodeCachedDataDir),
+			instantiationService.createInstance(NodeCachedDataCleaner, this.configuration.codeCachePath),
 			instantiationService.createInstance(LanguagePackCachedDataCleaner),
 			instantiationService.createInstance(StorageDataCleaner, this.configuration.backupWorkspacesPath),
 			instantiationService.createInstance(LogsDataCleaner),
